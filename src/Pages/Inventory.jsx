@@ -21,7 +21,7 @@ const Inventory = () => {
         </div>
       </div>
       <div className="pt-3 ">
-        <IconBreadcrumbs />
+        <IconBreadcrumbs path={"Inventory"} />
       </div>
       <div className="mt-2">
         <EnhancedTable />

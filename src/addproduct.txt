@@ -1,0 +1,30 @@
+import { useDispatch } from 'react-redux';
+import { addProduct } from './store';
+
+const ProductForm = () => {
+  const dispatch = useDispatch();
+
+  const handleAddProduct = () => {
+    const newProduct = {
+      productName: "tee",
+      category: "Ralph Hubbard",
+      sellingPrice: "145",
+      costPrice: "122",
+      quantityInStock: "12",
+      orderType: "Carlos Abbott",
+      discountEnabled: true,
+      expiryEnabled: true,
+      retunPolicy: false,
+      shortDescription: "this is short discription",
+      longDescription: "<p>this is long discription</p>",
+      productImage: {},
+      date: "2020-12-11T18:30:00.000Z",
+      time: "2020-12-12T06:30:00.000Z",
+    };
+
+    // Dispatch new product to Redux store
+    dispatch(addProduct(newProduct));
+  };
+
+  return <button onClick={handleAddProduct}>Add Product</button>;
+};

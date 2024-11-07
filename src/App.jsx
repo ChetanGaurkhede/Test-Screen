@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/home";
 import Navbar from "./Components/Navbar";
 import "./App.css";
-import { BasicTable } from "./Components/BasicTable";
 import Inventory from "./Pages/Inventory";
+import AddProduct from "./Pages/AddProduct";
 
 function App() {
   return (
@@ -13,8 +13,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/basic" element={<BasicTable />} />
           <Route path="/inventory" element={<Inventory />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/category" element={<AddProduct />} />
         </Routes>
       </BrowserRouter>
     </div>
