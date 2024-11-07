@@ -22,10 +22,11 @@ const Inventory = () => {
             <img src="src/assets/Images/Bag.png" alt="" />
           </div>
         </div>
+
       </div>
       <div className="pt-3 ">
         <div className="flex w-full justify-between">
-          <IconBreadcrumbs />
+               <IconBreadcrumbs path={"Inventory"} />
           <div>
             <Link to="/">
               <button className="bg-blue-500 p-2 px-4 rounded-xl text-white flex gap-3"><img src="src/assets/Images/fi_plus.png" alt="" /> Add a New Procduct</button>
