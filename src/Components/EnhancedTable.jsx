@@ -70,31 +70,49 @@ const headCells = [
     id: 'name',
     numeric: false,
     disablePadding: true,
-    label: 'Dessert (100g serving)',
+    label: 'Product name',
   },
   {
-    id: 'calories',
+    id: 'Category',
     numeric: true,
     disablePadding: false,
-    label: 'Calories',
+    label: 'Category',
   },
   {
-    id: 'fat',
+    id: 'Unit Price',
     numeric: true,
     disablePadding: false,
-    label: 'Fat (g)',
+    label: 'Unit Price',
   },
   {
-    id: 'carbs',
+    id: 'In Stock',
     numeric: true,
     disablePadding: false,
-    label: 'Carbs (g)',
+    label: 'In Stock',
   },
   {
-    id: 'protein',
+    id: 'Discount',
     numeric: true,
     disablePadding: false,
-    label: 'Protein (g)',
+    label: 'Discount',
+  },
+  {
+    id: 'Total Value',
+    numeric: true,
+    disablePadding: false,
+    label: 'Total Value',
+  },
+  {
+    id: 'Action',
+    numeric: true,
+    disablePadding: false,
+    label: 'Action',
+  },
+  {
+    id: 'Status',
+    numeric: true,
+    disablePadding: false,
+    label: 'Status',
   },
 ];
 
@@ -185,7 +203,7 @@ function EnhancedTableToolbar(props) {
           id="tableTitle"
           component="div"
         >
-          Nutrition
+          Inventory Items
         </Typography>
       )}
       {numSelected > 0 ? (
