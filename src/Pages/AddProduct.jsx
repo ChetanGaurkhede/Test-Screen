@@ -34,7 +34,7 @@ function AddProduct() {
   const [date, setDate] = useState(dayjs("2024-11-07"));
   const [time, setTime] = useState(dayjs("2024-11-07T12:00"));
 
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     productName: "",
     category: "",
     sellingPrice: "",
@@ -48,9 +48,10 @@ function AddProduct() {
     longDescription: "",
     productImage: null,
     date: date.format("YYYY-MM-DD"),
-    // set time with format am and pm
     time: time.format("hh:mm A"),
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const modules = {
     toolbar: [
@@ -96,19 +97,16 @@ function AddProduct() {
           name: file.name,
           size: file.size,
           type: file.type,
-          // Add other relevant properties if needed
         },
       }));
     }
   };
 
   const handleCategory = (event) => {
-    console.log(event.target.value);
     setFormData((prevData) => ({ ...prevData, category: event.target.value }));
   };
 
   const handleOderType = (event) => {
-    console.log(event.target.value);
     setFormData((prevData) => ({ ...prevData, orderType: event.target.value }));
   };
 
@@ -117,18 +115,12 @@ function AddProduct() {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  // function getStyles(name, personName, theme) {
-  //   // return {
-  //   //   fontWeight:
-  //   //     personName.indexOf(name) === -1
-  //   //       ? theme.typography.fontWeightRegular
-  //   //       : theme.typography.fontWeightMedium,
-  //   // };
-  // }
-
   const handelSubmit = () => {
     console.log(formData);
     dispatch(addProduct(formData));
+
+    setFormData(initialFormData);
+    
   };
 
   return (

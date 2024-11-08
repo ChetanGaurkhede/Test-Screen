@@ -1,18 +1,22 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import * as React from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 export default function SelectSmall() {
-  const [age, setAge] = React.useState('');
+  const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
   return (
-    <FormControl  className='bg-[#FEF5EA]' sx={{ m: 1, minWidth: 175, }} size="small">
+    <FormControl
+      className="bg-[#FEF5EA]"
+      sx={{ m: 1, minWidth: 150 }}
+      size="small"
+    >
       <InputLabel id="demo-select-small-label">Nanny's Shop</InputLabel>
       <Select
         labelId="demo-select-small-label"

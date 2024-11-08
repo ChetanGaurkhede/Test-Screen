@@ -22,6 +22,7 @@ import {
 } from "@mui/icons-material";
 
 const headCells = [
+  { id: "productName", label: "Product Image", numeric: false },
   { id: "productName", label: "Product Name", numeric: false },
   { id: "category", label: "Category", numeric: false },
   { id: "unitPrice", label: "Unit Price", numeric: true },
@@ -181,6 +182,7 @@ const EnhancedTable = ({ data, ...extraData }) => {
                           onChange={(event) => handleClick(event, index)}
                         />
                       </TableCell>
+                      <TableCell><img src="\src\assets\Images\Rectangle 3.png" alt="" /></TableCell>
                       <TableCell>{product.productName}</TableCell>
                       <TableCell>{product.category}</TableCell>
                       <TableCell align="right">{product.unitPrice}</TableCell>
