@@ -7,7 +7,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="w-full h-[10vh] xl:w-[5vw] xl:h-[100vh] bg-red-white p-2 flex xl:flex-col justify-between items-center fixed bottom-0 xl:static shadow-2xl ">
+    <nav className="w-full h-[10vh] xl:w-[5vw] xl:h-[100vh] bg-red-white p-2 flex xl:flex-col justify-between items-center fixed bottom-0  shadow-5xl lg:left-0 bg-white border-2 z-10">
       <div>
         <img
           src="src/assets/Images/phantasm_logo_icon_-01_480 1.png"
