@@ -1,4 +1,4 @@
-const tableData = [
+export const tableData = [
   {
     productName: "Product 1",
     category: "Category 1",
@@ -131,6 +131,53 @@ const tableData = [
       "This Polo T-Shirt is made from high-quality materials and offers a comfortable fit.",
     action: "publish",
     productImage: { name: "polo_tshirt.jpg", size: 1024, type: "image/jpeg" },
+    date: "2024-11-07",
+    time: "12:00 PM",
+    action: "publish",
+    totalValue: 25856,
+    status: "Active",
+  },
+  {
+    productName: "Polo T-Shirt",
+    category: "Fashion",
+    sellingPrice: 125000,
+    costPrice: 0.0,
+    quantityInStock: "Out of Stock",
+    orderType: "In-store",
+    discountEnabled: false,
+    unitPrice: 3232,
+    expiryEnabled: false,
+    returnPolicy: true,
+    shortDescription: "Comfortable and stylish",
+    longDescription:
+      "This Polo T-Shirt is made from high-quality materials and offers a comfortable fit.",
+    action: "publish",
+    productImage: { name: "polo_tshirt.jpg", size: 1024, type: "image/jpeg" },
+    date: "2024-11-07",
+    time: "12:00 PM",
+    action: "publish",
+    totalValue: 25856,
+    status: "Active",
+  },
+];
+
+export const tableData2 = [
+  {
+    productName: "iPhone 13 Pro",
+    category: "Gadgets",
+    sellingPrice: 1225000,
+    costPrice: 0.0,
+    quantityInStock: 8,
+    orderType: "Online",
+    discountEnabled: true,
+    unitPrice: 3232,
+    expiryEnabled: true,
+    returnPolicy: true,
+    shortDescription: "Latest model with advanced features",
+    longDescription:
+      "The iPhone 13 Pro features a stunning display, powerful processor, and advanced camera system.",
+    action: "publish",
+    productImage: { name: "iphone13pro.jpg", size: 2048, type: "image/jpeg" },
     date: "2024-11-07",
     time: "12:00 PM",
     action: "publish",

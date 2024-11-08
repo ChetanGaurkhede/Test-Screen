@@ -6,8 +6,12 @@ import ProductCount from "../Components/ProductCount";
 import ProductStatus from "../Components/ProductStatus";
 import { Link } from "react-router-dom";
 import UserProfile from "../Components/UserProfile";
+import { tableData2 } from "../constant/data";
+import { selectProducts } from "../redux/reducer/reducer";
+import { useSelector } from "react-redux";
 
 const ViewInventory = () => {
+  const localData = useSelector(selectProducts);
   return (
     <div className="w-full px-2">
       <UserProfile />
@@ -69,7 +73,7 @@ const ViewInventory = () => {
         </div>
       </div>
       <div className="mt-2">
-        <EnhancedTable />
+        <EnhancedTable data={[...tableData2, ...localData]} />
       </div>
     </div>
   );

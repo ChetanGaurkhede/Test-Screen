@@ -133,7 +133,7 @@ function AddProduct() {
 
   return (
     <Box sx={{ p: 2, width: "100%", borderRadius: 2 }}>
-      < UserProfile />
+      <UserProfile />
 
       <Box className="pt-3">
         <IconBreadcrumbs path={"New Product"} />
