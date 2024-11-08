@@ -8,6 +8,8 @@ import UserProfile from "../Components/UserProfile";
 import { tableData } from "../constant/data";
 import { useSelector } from "react-redux";
 import { selectProducts } from "../redux/reducer/reducer";
+import PathBtn from "../Components/PathBtn";
+
 const Inventory = () => {
   const localData = useSelector(selectProducts);
 
@@ -16,16 +18,8 @@ const Inventory = () => {
     <div className="w-full px-2">
       <UserProfile />
       <div className="pt-3 ">
-        <div className="flex w-full justify-between">
-          <IconBreadcrumbs path={"Inventory"} />
-          <div>
-            <Link to="/category">
-              <button className="bg-blue-500 p-2 px-4 rounded-xl text-white flex gap-3">
-                <img src="src/assets/Images/fi_plus.png" alt="" /> Add a New
-                Procduct
-              </button>
-            </Link>
-          </div>
+        <div>
+          <PathBtn />
         </div>
         <div className="flex flex-col md:flex-row gap-5 md:gap-9 mt-3">
           <div className="w-full md:w-1/2">

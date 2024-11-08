@@ -134,11 +134,6 @@ function AddProduct() {
   return (
     <Box sx={{ p: 2, width: "100%", borderRadius: 2 }}>
       <UserProfile />
-
-      <Box className="pt-3">
-        <IconBreadcrumbs path={"New Product"} />
-      </Box>
-
       <Box className="flex items-center justify-between p-2">
         <Typography>New Inventory Item</Typography>
         <div className="flex gap-2 items-center">

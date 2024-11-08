@@ -10,7 +10,7 @@ import ViewInventory from "./Pages/ViewInventory";
 
 function App() {
   return (
-    <div className="App flex ">
+    <div className="App flex pb-[5vh] py-2 md:pb-0 xl:pl-[5vw] relative ">
       <BrowserRouter>
         <Navbar />
         <Routes>
