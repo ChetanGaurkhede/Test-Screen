@@ -1,3 +1,12 @@
 .ql-container {
     height: 150px !important;
+    border: none;
+}
+.ql-toolbar {
+    border: none !important;
+}
+.ql-container {
+    
+    border: none !important;
+    border-top: 1px solid gray !important;
 }
