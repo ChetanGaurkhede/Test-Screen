@@ -1,18 +1,18 @@
 import React from "react";
 import SelectSmall from "./SelectSmall";
 
-const ProductStatus = () => {
+const ProductStatus = ({ src, data = [] }) => {
   return (
-    <div className="shadow-md bg-white p-5 border-[1px] rounded-xl text-lg ">
-      <div className=" justify-between  w-full flex">
+    <div className="shadow-md bg-white p-5 border-[1px] rounded-xl text-lg {}">
+      <div className="justify-between w-full flex">
         <div>
           <img
-            src="src/assets/Images/2 User.png"
+            src={src}
             alt="Bag"
             className="p-2 bg-yellow-50 border-2 rounded-xl"
           />
         </div>
-        
+
         <div>
           <select name="duration" id="time" className="text-sm text-gray-600">
             <option>Last Week</option>
@@ -20,19 +20,20 @@ const ProductStatus = () => {
           </select>
         </div>
       </div>
-      <div className="flex justify-between xl:w-11/12 pt-4 ">
-        <div>
-          <h2 className="text-red-300">Low Stock Alert</h2>
-          <p className="font-bold text-gray-600">23</p>
-        </div>
-        <div>
-          <h2 className="text-gray-500">Expired</h2>
-          <p className="font-bold text-gray-600">3 </p>
-        </div>
-        <div>
-          <h2 className="text-gray-500">1 Star Rating</h2>
-          <p className="font-bold text-gray-600">2</p>
-        </div>
+
+      <div className="flex justify-between xl:w-11/12 pt-4">
+        {data.map((item, index) => (
+          <div key={index}>
+            <h2
+              className={
+                index === 1 || index === 2 ? "text-gray-600" : "text-red-300"
+              }
+            >
+              {item.head}
+            </h2>
+            <p className="font-bold text-gray-600">{item.count}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

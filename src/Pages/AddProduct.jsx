@@ -27,6 +27,7 @@ import dayjs from "dayjs";
 import InsertPhotoIcon from "@mui/icons-material/InsertPhoto"; // Image upload icon
 import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/reducer/reducer";
+import UserProfile from "../Components/UserProfile";
 
 function AddProduct() {
   const dispatch = useDispatch();
@@ -131,21 +132,14 @@ function AddProduct() {
   };
 
   return (
-    <Box sx={{ p: 4, width: "100%", borderRadius: 2 }}>
-      <Box className="flex items-center justify-between p-2 shadow-md rounded-md">
-        <Typography variant="h3">Inventory</Typography>
-        <div className="flex gap-2 items-center">
-          <SelectSmall />
-          <img src="src/assets/Images/Bag.png" alt="Bag" />
-          <img src="src/assets/Images/Bag.png" alt="Bag" />
-        </div>
-      </Box>
+    <Box sx={{ p: 2, width: "100%", borderRadius: 2 }}>
+      < UserProfile />
 
       <Box className="pt-3">
         <IconBreadcrumbs path={"New Product"} />
       </Box>
 
-      <Box className="flex items-center justify-between p-2 mt-6">
+      <Box className="flex items-center justify-between p-2">
         <Typography>New Inventory Item</Typography>
         <div className="flex gap-2 items-center">
           <Button variant="contained" color="secondry">
