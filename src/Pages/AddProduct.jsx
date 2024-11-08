@@ -86,10 +86,19 @@ function AddProduct() {
   ];
 
   const handleImageUpload = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      productImage: e.target.files[0],
-    }));
+    const file = e.target.files[0];
+
+    if (file) {
+      setFormData((prevData) => ({
+        ...prevData,
+        productImage: {
+          name: file.name,
+          size: file.size,
+          type: file.type,
+          // Add other relevant properties if needed
+        },
+      }));
+    }
   };
 
   const handleCategory = (event) => {
