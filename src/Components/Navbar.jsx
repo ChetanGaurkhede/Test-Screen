@@ -20,7 +20,7 @@ const Navbar = () => {
           <Link to="/category" className={`p-2 rounded-xl ${isActive("/category") ? "bg-blue-500" : ""}`}>
             <img src="src/assets/Images/Category.png" alt="Category" className="w-6 h-6 xl:w-auto xl:h-auto" />
           </Link>
-          <Link to="/bag" className={`p-2 rounded-xl ${isActive("/bag") ? "bg-blue-500" : ""}`}>
+          <Link to="/viewInventory" className={`p-2 rounded-xl ${isActive("/bag") ? "bg-blue-500" : ""}`}>
             <img src="src/assets/Images/Bag.png" alt="Bag" className="w-6 h-6 xl:w-auto xl:h-auto" />
           </Link>
           <Link to="/user" className={`p-2 rounded-xl ${isActive("/user") ? "bg-blue-500" : ""}`}>
